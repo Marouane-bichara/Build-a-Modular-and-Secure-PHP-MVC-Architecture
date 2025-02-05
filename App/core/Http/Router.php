@@ -89,7 +89,7 @@ class Router
 
 
           
-
+          
           $objectController = new $controller();
 
           return $objectController->$method();
