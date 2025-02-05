@@ -7,10 +7,7 @@ namespace App\Core\session;
 class Session
 {
 
-  // start session:
-  // set session:
-  // unset session:
-  // distroy all session:
+
 
 
   public static function startSession()

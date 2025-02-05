@@ -1,18 +1,30 @@
 <?php
 namespace App\controllers;
-class RedirecetUser{
+use App\core\path\Path;
 
-    public function homePage(){
-        include dirname(__DIR__). '/views/home.php';
-        exit;
+class RedirecetUser extends Path {
 
+    public function __construct() {
+        parent::__construct(); // Calls Path's constructor to initialize Twig
     }
 
-    public function aboutPage()
-    {
-        include dirname(__DIR__). '/views/about.php';
-        exit;   
+    public function homePage() {
+        $data = [
+            'name' => 'John Doe'
+        ];
+        echo $this->twig->render('home.twig', $data); 
+        exit;
+    }
+
+    public function authPage() {
+        $data = [
+            'name' => 'John Doe'
+        ];
+        echo $this->twig->render('auth/auth.twig', $data); 
+        exit;
     }
 }
+
+
 
 ?>
